@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitacora Allison Lopez</title>
+    <link rel="icon" href="./recursos/Img/LOGO_CAPOUILLIEZ - Isotipos (2)-08.png">
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+            font-family: arial,sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        header{
+            padding: 20px;
+            background-color: rgb(99, 7, 7);
+            color:white;
+        }
+        main{
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-top: 1px solid salmon;
+            background-color: antiquewhite;
+        }
+        footer span {
+    font-size: 0.85em;
+    opacity: 0.9;
+        }
+footer img {
+    height: 60px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+        }       
+footer img:hover {
+    transform: scale(1.15);
+        }
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+        }
+    h1 {
+    color: #df3030;
+    text-shadow:
+        0 0 5px #e9dfdf,
+        0 0 10px #f2eaea,
+        0 0 20px #faf6f6,
+        0 0 40px #fafafa;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+        }
+        .semana {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+        }
+        .semana p {
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            line-height: 1.6;
+            max-height: 5.4em;
+        }
+        .semana.abierta p {
+    display: block;
+    max-height: none;
+        }
+        .semana::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(transparent, rgba(255,255,255,0.8));
+    transition: opacity 0.3s;
+        }
+        .semana.abierta::after {
+    opacity: 0;
+        }       
+        h1, .semana h2 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+        }
+        body {
+    font-family: 'Roboto', sans-serif;
+        }
+        footer span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+        }
+        footer img{
+    width: auto;
+    height: 60px;
+        }
+        .semana{
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+        }
+    .semana:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+    .semana h2{
+    color: #630707;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+        }
+    .semana p{
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+        }
+        .archivo-pdf{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    margin-top: 15px;
+        }
+        .semana.horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+                }
+    .pdf-container {
+    width: 100%;
+    max-width: 900px;
+    height: 300px; /* menos alto */
+    overflow: hidden;
+    border-radius: 10px;
+                    }
+    .pdf-container embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+                }
+                .pdf-container {
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 35 / 3; /* esto lo hace rectangular */
+    margin: 0 auto;
+                    }
+.pdf-container embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+                    }
+               .pdf-container.vacio {
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-style: italic;
+            }
+            video, iframe{
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            }
+</style>
+</head>
+<body>
+    <header> 
+    <h1>Bitacora segunda y tercera Unidad</h1>
+    </header> 
+    <main> 
+    <h3>Bitacora de semana</h3>      
+    <div class="semana horizontal">
+    <h2>Semana 1</h2>
+    <div class="pdf-container">
+        <embed src="recursos/pdf/arduino.pdf" type="application/pdf">
+    </div>
+    </div>
+    <div class="semana">
+    <h2>Video de arduino</h2>
+    <div class="pdf-container vacio">
+        <div class="semana">
+
+    <h2>Semana 3</h2>
+
+    <video controls width="100%">
+        <source src="recursos/Video .mp4" type="video/mp4">
+    </video>
+    </div>
+        <p></p>
+    </div>
+    </div>
+    </main> 
+    <footer>
+    <span>@Allilop001</span>
+    <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="75" width="300">
+    </footer>
+</body>
+</html>
+
+
+
