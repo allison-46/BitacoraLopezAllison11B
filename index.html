@@ -194,6 +194,15 @@ footer img:hover {
     margin-top: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
             }
+        video{
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            }
 </style>
 </head>
 <body>
@@ -207,19 +216,27 @@ footer img:hover {
     <div class="pdf-container">
         <embed src="recursos/pdf/arduino.pdf" type="application/pdf">
     </div>
-    </div>
-    <div class="semana">
-    <h2>Video de arduino</h2>
-    <div class="pdf-container vacio">
-        <div class="semana">
+   <main>
+    <h3>Bitácora de semana</h3>
+    <!-- Semana 1 -->
+    <div class="semana horizontal">
+        <h2>Semana 1</h2>
 
-    <h2>Semana 3</h2>
-
-    <video controls width="100%">
-        <source src="recursos/Video .mp4" type="video/mp4">
-    </video>
+        <div class="pdf-container">
+            <embed src="recursos/pdf/arduino.pdf" type="application/pdf">
+        </div>
     </div>
     <!-- Semana 2 -->
+    <div class="semana horizontal">
+        <h2>Video de Arduino</h2>
+        <video controls>
+            <source src="recursos/Video.805141680.394207_1228.mp4" type="video/mp4">
+            Tu navegador no soporta este video.
+        </video>
+    </div>
+
+</main>
+   
 <div class="semana horizontal">
     <h2>Video de Arduino</h2>
 
